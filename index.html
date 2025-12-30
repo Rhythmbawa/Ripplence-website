@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+        name="description"
+        content="Ripplence is an IT services company specializing in web and mobile application development, 
+                UI/UX design, and scalable digital solutions for startups and growing businesses"/>
+
+    <!-- Page title shown in browser tab -->
+    <title>Ripplence | App & Web Development</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Font Awesome CDN -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    media="print"
+    onload="this.media='all'"
+    >
+
+    <div class="nav-overlay"></div>
+
+<!-- =================  ================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Ripplence",
+  "url": "https://www.ripplence.com",
+  "logo": "https://www.ripplence.com/logo/logo.svg",
+  "description": "Ripplence is an IT services company specializing in web and mobile application development, 
+                    UI/UX design, and scalable digital solutions for startups and growing businesses.",
+  "email": "hello@ripplence.com",
+  "telephone": "+91-7056565594",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "10:00",
+    "closes": "17:00"
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "Service",
+      "name": "Web Application Development",
+      "description": "Design and development of scalable, secure, and high-performance web applications tailored to business requirements.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Ripplence"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Mobile App Development",
+      "description": "Development of reliable and user-friendly mobile applications for Android and iOS platforms.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Ripplence"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "UI / UX Design",
+      "description": "User-centric interface and experience design focused on usability, clarity, and engagement.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Ripplence"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Backend & API Development",
+      "description": "Secure backend systems and RESTful APIs designed for performance, scalability, and integration.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Ripplence"
+      }
+    }
+  ]
+}
+</script>
+
+
+</head>
+<body>
+
+    <!-- ================= HEADER / NAVBAR ================= -->
+    <header class="header" id="site-header"> 
+        <div class="container nav">
+            <!-- Text logo (can be replaced with image later) -->
+            <a href="#home" class="logo" aria-label="Go to homepage">
+            <svg 
+                class="logo-img"
+                xmlns="http://www.w3.org/2000/svg"
+                alt="Ripplence - App and Web Development Company" 
+                width="1.5in" height="1.39in" 
+                loading="eager"
+                viewBox="0 0 108 100"
+                role="img"
+            >
+            <g opacity="1">
+                <path fill="currentColor" d="M84.04,57.56c-4.91-2.45-11.44-4.31-18.96-5.21l-8.16-14.32c-.6-1.06-1.69-1.66-2.92-1.66s-2.29.59-2.89,1.66l-8.15,14.32c-7.53.89-14.06,2.75-18.97,5.21L51.91,8.62c.43-.76,1.23-1.23,2.09-1.23s1.66.47,2.12,1.23l27.92,48.94Z"/>
+                <path fill="currentColor" d="M85.47,79.57c-5.9,6.63-16.94,13.03-31.47,13.03-12.53,0-23.67-6-30.21-12.37,7.23,3.68,17.97,5.97,30.21,5.97,12.96,0,24.3-2.59,31.47-6.63Z"/>
+                <path fill="currentColor" d="M66.77,62.3c-.6,1.66-5.54,3.88-12.77,3.88s-12.14-2.22-12.73-3.88l.2-.33,3.01-5.34h.03l.56-1,.47-.83.59-1.06h.03l.4-.76h.03l.56-1.03,6.83-11.97,6.83,11.97.6,1.03.43.76.6,1.06h.03l.43.8h.03l.56,1.03,3.05,5.34.2.33Z"/>
+                <path fill="currentColor" d="M90.17,68.34v-.03l-.06-.36c-.27-1.23-1.03-2.49-2.26-3.68-3.48-3.51-10.74-6.6-20.59-8.09l.6,1.06,2.15,3.78.07.1c.17.27.23.56.23.86,0,1.73-.93,3.15-2.52,4.28-.86.67-1.95,1.23-3.18,1.69-2.98,1.13-6.83,1.73-10.61,1.73s-7.63-.6-10.58-1.73c-1.23-.46-2.32-1.03-3.18-1.69-1.59-1.13-2.52-2.55-2.52-4.28,0-.3.06-.59.23-.86l.06-.1,2.16-3.81.59-1.03c-9.84,1.46-17.14,4.57-20.62,8.09-1.23,1.19-1.99,2.45-2.26,3.68l-.07.36v.03c-.03.2-.03.4-.03.6,0,.13,0,.23.03.36v.26c.89,6.47,15.19,13.16,36.17,13.16s35.28-6.7,36.17-13.16v-.26c.03-.14.03-.23.03-.36,0-.2,0-.4-.03-.6ZM80.1,67.94c-1.86,6.33-14.29,9.72-26.09,9.72s-24.2-3.38-26.09-9.72c-.17-.53-.27-1.09-.27-1.69,0-.96.8-1.73,1.76-1.73s1.72.76,1.72,1.73c0,.56.23,1.13.63,1.69,2.35,3.22,11.11,6.23,22.25,6.23s19.89-3.01,22.25-6.23c.39-.56.63-1.13.63-1.69,0-.96.8-1.73,1.76-1.73s1.72.76,1.72,1.73c0,.6-.1,1.16-.26,1.69Z"/>
+            </g>
+            </svg>
+                <span class="logo-text">Ripplence</span>
+            </a>
+
+
+            <button 
+                    class="nav-toggle" 
+                    aria-label="Toggle navigation" 
+                    aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </button>
+
+
+            <!-- Navigation menu -->
+            <nav class="navbar">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#services" class="nav-item">Services</a>
+                <a href="#portfolio" class="nav-item">Portfolio</a>
+                <a href="#contact" class="nav-item nav-cta">Contact</a>
+            </nav>
+        </div>
+    </header>
+<main id="main-content">
+
+            <div class="floating-theme-toggle">
+                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+            </div>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+    <div id="particles-js"></div>
+    <div class="container hero-grid">
+
+        <!-- LEFT CONTENT -->
+        <div class="hero-content">
+            <span class="hero-badge">Product-Focused IT Solutions</span>
+
+            <h1>
+                We Design & Build <span class="highlight">Web and Mobile Products</span><br />
+                That Are Built to Scale
+            </h1>
+
+
+            <p class="hero-subtext">
+                Ripplence partners with startups and growing businesses to design, develop,
+                and deliver reliable web and mobile applications—engineered for
+                performance, security, and long-term growth.
+            </p>
+
+
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Discuss Your Project</a>
+                <a href="#services" class="btn btn-secondary">Explore Our Capabilities</a>
+            </div>
+
+        </div>
+
+        <!-- RIGHT FEATURED PROJECT -->
+        <div class="hero-feature">
+            <div class="featured-card card-hover">
+                <span class="project-tag">Featured Work</span>
+                <h3>Client Management Dashboard</h3>
+                <p>
+                    A secure, role-based web application built to help businesses manage
+                    users, analytics, and operational data efficiently.
+                </p>
+                <ul>
+                    <li>✔ Web Application</li>
+                    <li>✔ Secure Admin Panel</li>
+                    <li>✔ Scalable Architecture</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="about" id="about">
+    <div class="container about-grid">
+
+        <!-- LEFT CONTENT -->
+        <div class="about-content reveal">
+            <span class="section-badge">Who We Are</span>
+            <h2>
+                We Build Digital Products<br />
+                <span class="highlight">With Clarity, Discipline, and Purpose</span>
+            </h2>
+            <p class="about-text">
+                Ripplence is a technology-focused IT services firm that helps startups and
+                growing businesses turn ideas into stable, production-ready digital
+                products. We don't just build applications—we solve real business
+                problems through thoughtful engineering and clear execution.
+            </p>
+            <p class="about-text muted">
+                Our work is grounded in strong technical fundamentals, clean
+                architecture, and user-centric design. Every solution we deliver is
+                built with scalability, security, and long-term maintainability in
+                mind—so it continues to add value as your business grows.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">Let's Build Something Solid</a>
+        </div>
+
+        <!-- RIGHT FEATURES -->
+        <div class="about-cards">
+            <div class="reveal fast delay-1">
+                <div class="about-card card-hover">
+                <h3>Product-first Mindset</h3>
+                <p>
+                    We approach every project as a product, focusing on usability,
+                    performance, and real-world business impact—not just features.
+                </p>
+            </div>
+            </div>
+
+            <div class="reveal fast delay-2">
+                <div class="about-card card-hover">
+                <h3>Clean & Maintainable Code</h3>
+                <p>
+                    Our codebases are structured, documented, and designed for easy
+                    enhancement, reducing technical debt as your system evolves.
+                </p>
+            </div>
+            </div>
+
+            <div class="reveal fast delay-3">
+                <div class="about-card card-hover">
+                <h3>End-to-End Delivery</h3>
+                <p>
+                    From planning and UI/UX to development, testing, and deployment, we
+                    manage the entire lifecycle with consistency and accountability.
+                </p>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ================= SERVICES SECTION ================= -->
+   
+    <section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">Our Core Capabilities</h2>
+        <p class="section-intro">
+            We help businesses design, build, and scale digital products through
+            carefully engineered solutions. Our services are structured to support
+            both early-stage development and long-term growth.
+        </p>
+
+        <div class="services-grid">
+
+            <!-- Service 1 -->
+            <div class="reveal fast">
+            <div class="service-card card-hover">
+                <h3>Mobile App Development</h3>
+                <p class="service-desc">
+                    We build secure, high-performance mobile applications that are designed
+                    for reliability, usability, and future scalability across platforms.
+                </p>
+                <ul class="service-list">
+                    <li>Android Applications</li>
+                    <li>iOS Applications</li>
+                    <li>Cross-Platform Development</li>
+                    <li>Secure API Integration</li>
+                    <li>Performance & Stability Optimization</li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="reveal fast">
+            <div class="service-card card-hover">
+                <h3>Web Application Development</h3>
+                <p class="service-desc">
+                    From business websites to complex web applications, we develop
+                    responsive, scalable solutions aligned with operational and growth
+                    objectives.
+                </p>
+                <ul class="service-list">
+                    <li>Custom Websites & Web Apps</li>
+                    <li>Admin Panels & Dashboards</li>
+                    <li>Optimized Frontend Architecture</li>
+                    <li>SEO-Ready & Maintainable Codebases</li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Service 3 -->
+             <div class="reveal fast">
+            <div class="service-card card-hover">
+                <h3>IT Services & Technical Support</h3>
+                <p class="service-desc">
+                    We provide ongoing technical support and system maintenance to ensure
+                    your applications remain stable, secure, and up to date after launch.
+                </p>
+                <ul class="service-list">
+                    <li>Application Maintenance & Enhancements</li>
+                    <li>Backend & System Integration</li>
+                    <li>Cloud & API Support</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+    <!-- ================= PROCESS SECTION ================= -->
+
+    <section class="process" id="process">
+    <div class="container">
+
+        <h2 class="section-title">How We Work</h2>
+            <p class="section-intro">
+                Our approach is structured, transparent, and focused on delivering
+                reliable outcomes. Every project follows a clear process to ensure
+                alignment, quality, and long-term success.
+            </p>
+
+        <div class="process-grid">
+
+            <!-- Process 1 -->
+            <div class="reveal fast">
+            <div class="process-card card-hover">
+                <h3>1. Discovery & Alignment</h3>
+                <p class="process-desc">
+                    We begin by understanding your business goals, technical requirements,
+                    and constraints to ensure we are solving the right problem from the
+                    start.
+                </p>
+            </div>
+        </div>
+
+            <!-- Process 2 -->
+            <div class="reveal fast">
+            <div class="process-card card-hover">
+                <h3>2. Planning & Architecture</h3>
+                <p class="process-desc">
+                    We define the solution architecture, technology stack, timelines, and
+                    milestones to establish a clear and realistic execution plan.
+                </p>
+            </div>
+        </div>
+
+            <!-- Process 3 -->
+            <div class="reveal fast">
+            <div class="process-card card-hover">
+                <h3>3. Design & Development</h3>
+                <p class="process-desc">
+                    Our team designs intuitive user interfaces and develops clean,
+                    maintainable code with a focus on performance and scalability.
+                </p>
+            </div>
+        </div>
+
+            <!-- Process 4 -->
+            <div class="reveal fast">
+            <div class="process-card card-hover">
+                <h3>4. Testing & Deployment</h3>
+                <p class="process-desc">
+                    We thoroughly test functionality, performance, and security before
+                    deploying the solution to ensure a smooth and stable launch.
+                </p>
+            </div>
+        </div>
+
+            <!-- Process 5 -->
+            <div class="reveal fast">
+            <div class="process-card card-hover">
+                <h3>5. Support & Continuous Improvement</h3>
+                <p class="process-desc">
+                    After launch, we provide ongoing support, maintenance, and iterative
+                    improvements as your product and business evolve.
+                </p>
+            </div>
+        </div>
+    </div>
+
+        <div class="process-cta">
+            <a href="#contact" class="btn btn-secondary">
+                Start a Conversation
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- ================= PORTFOLIO SECTION ================= -->
+
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="section-title">Selected Work</h2>
+        <p class="section-intro">
+            A selection of projects where we helped businesses design, build, and
+            improve digital products through structured engineering and thoughtful
+            execution.
+        </p>
+
+        <!-- Filter Buttons -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">App</button>
+            <button class="filter-btn" data-filter="uiux">UI/UX</button>
+            <button class="filter-btn" data-filter="api">API</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+
+            <div class="reveal fast" data-category="web">
+                <div class="portfolio-card card-hover">
+                <h3>Corporate Website</h3>
+                <p>
+                    Designed and developed a responsive business website with a clean
+                    information architecture, optimized performance, and SEO-ready
+                    structure.
+                </p>
+                <span class="portfolio-tag">Web</span>
+            </div>
+            </div>
+
+            <div class="reveal fast" data-category="app">
+                <div class="portfolio-card card-hover">
+                <h3>Attendance Tracking Application</h3>
+                <p>
+                    Built a mobile application that enables organizations to track employee
+                    attendance, manage records, and generate reports through a secure and
+                    intuitive interface.
+                </p>
+                <span class="portfolio-tag">App</span>
+            </div>
+            </div>
+
+            <div class="reveal fast" data-category="uiux">
+                <div class="portfolio-card card-hover">
+                <h3>Administrative Dashboard UI</h3>
+                <p>
+                    Designed a clean and user-friendly dashboard interface to help teams
+                    monitor key data, workflows, and system activity efficiently.
+                </p>
+                <span class="portfolio-tag">UI/UX</span>
+            </div>
+            </div>
+
+            <div class="reveal fast" data-category="api">
+                <div class="portfolio-card card-hover">
+                <h3>Backend API Service</h3>
+                <p>
+                    Developed a secure RESTful API to support data management, system
+                    integrations, and scalable application workflows.
+                </p>
+                <span class="portfolio-tag">API</span>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= FAQ SECTION ================= -->
+<section class="faq" id="faq">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-intro">
+            Clear answers to common questions about how we work, project timelines,
+            and ongoing support—so you know exactly what to expect.
+        </p>
+
+        <div class="faq-list">
+
+            <div class="faq-item reveal fast">
+                <button class="faq-question">
+                    What services does Ripplence provide?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        We provide end-to-end web and mobile application development, including
+                        UI/UX design, backend and API development, deployment support, and
+                        ongoing maintenance services.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal fast">
+                <button class="faq-question">
+                    Do you work with startups and small businesses?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Yes. We regularly work with early-stage startups, founders, and growing
+                        businesses. Our process is flexible and scalable, making it suitable for
+                        both MVP development and long-term product growth.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal fast">
+                <button class="faq-question">
+                    How long does a typical project take?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Timelines depend on the scope and complexity of the project. A standard
+                        business website typically takes 2-4 weeks, while larger web or mobile
+                        applications may take several months. We provide clear timelines after
+                        initial discovery and planning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item reveal fast">
+                <button class="faq-question">
+                    Do you offer post-launch support?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>
+                        Yes. We offer post-launch support including maintenance, performance
+                        monitoring, bug fixes, and feature enhancements to ensure your product
+                        remains stable and up to date.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="section-title">Let's Discuss Your Requirements</h2>
+        <p class="section-intro">
+            Whether you are planning a new digital product or looking to improve an
+            existing system, share your requirements with us and we will respond
+            with clarity and next steps.
+        </p>
+
+        <div class="contact-wrapper">
+            <!-- Contact Form -->
+            <form id="contactForm" class="contact-form reveal" 
+                    action="send-mail.php" method="POST" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        autocomplete="name"
+                        placeholder="Your name" required>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        autocomplete="email"
+                        placeholder="you@example.com" required>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea 
+                        id="message" 
+                        name="message"
+                        autocomplete="off" 
+                        rows="5" 
+                        placeholder="Briefly describe your project, goals, or challenges." required></textarea>
+                    <small class="error-msg"></small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit Your Enquiry</button>
+                <p 
+                    class="form-success" 
+                    id="formSuccess">
+                    Thank you for reaching out. We have received your message and will get
+                    back to you within one business day.
+                </p>
+            </form>
+
+            <!-- Contact Info -->
+            <div class="contact-side">
+
+             <!-- Business Hours -->
+                 <div class="reveal fast">
+                    <div class="contact-card card-hover">
+                     <h3>Business Hours</h3>
+                     <p>Monday - Friday</p>
+                     <p><strong>10:00 AM - 5:00 PM (IST)</strong></p>
+                     <br>
+                     <p class="muted">
+                        Discussions outside standard business hours can be scheduled by prior
+                        appointment.
+                    </p>
+                </div>
+            </div>
+                    <!-- Contact Information -->
+                    <div class="reveal fast delay-1">
+                        <div class="contact-card card-hover">
+                        <h3>Contact Information</h3>
+                        <p>Email: <a href="mailto:contact@xyz.com">hello@ripplence.com</a></p>
+                        <p>Phone: +91-7056565594</p>
+                        <p>Address: Haryana, India</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<br> 
+
+<div class="contact-map reveal">
+        <iframe
+            id="mapFrame"
+            title="Ripplence office location on Google Maps"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+    <div class="container footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+
+        <div class="footer-logo">
+            <svg 
+                class="footer-logo-img"
+                xmlns="http://www.w3.org/2000/svg"
+                alt="Ripplence - App and Web Development Company" 
+                width="0.55in" height="0.45in" 
+                loading="eager"
+                viewBox="0 0 108 100"
+                role="img"
+                >
+                    <g opacity="1">
+                        <path fill="currentColor" d="M84.04,57.56c-4.91-2.45-11.44-4.31-18.96-5.21l-8.16-14.32c-.6-1.06-1.69-1.66-2.92-1.66s-2.29.59-2.89,1.66l-8.15,14.32c-7.53.89-14.06,2.75-18.97,5.21L51.91,8.62c.43-.76,1.23-1.23,2.09-1.23s1.66.47,2.12,1.23l27.92,48.94Z"/>
+                        <path fill="currentColor" d="M85.47,79.57c-5.9,6.63-16.94,13.03-31.47,13.03-12.53,0-23.67-6-30.21-12.37,7.23,3.68,17.97,5.97,30.21,5.97,12.96,0,24.3-2.59,31.47-6.63Z"/>
+                        <path fill="currentColor" d="M66.77,62.3c-.6,1.66-5.54,3.88-12.77,3.88s-12.14-2.22-12.73-3.88l.2-.33,3.01-5.34h.03l.56-1,.47-.83.59-1.06h.03l.4-.76h.03l.56-1.03,6.83-11.97,6.83,11.97.6,1.03.43.76.6,1.06h.03l.43.8h.03l.56,1.03,3.05,5.34.2.33Z"/>
+                        <path fill="currentColor" d="M90.17,68.34v-.03l-.06-.36c-.27-1.23-1.03-2.49-2.26-3.68-3.48-3.51-10.74-6.6-20.59-8.09l.6,1.06,2.15,3.78.07.1c.17.27.23.56.23.86,0,1.73-.93,3.15-2.52,4.28-.86.67-1.95,1.23-3.18,1.69-2.98,1.13-6.83,1.73-10.61,1.73s-7.63-.6-10.58-1.73c-1.23-.46-2.32-1.03-3.18-1.69-1.59-1.13-2.52-2.55-2.52-4.28,0-.3.06-.59.23-.86l.06-.1,2.16-3.81.59-1.03c-9.84,1.46-17.14,4.57-20.62,8.09-1.23,1.19-1.99,2.45-2.26,3.68l-.07.36v.03c-.03.2-.03.4-.03.6,0,.13,0,.23.03.36v.26c.89,6.47,15.19,13.16,36.17,13.16s35.28-6.7,36.17-13.16v-.26c.03-.14.03-.23.03-.36,0-.2,0-.4-.03-.6ZM80.1,67.94c-1.86,6.33-14.29,9.72-26.09,9.72s-24.2-3.38-26.09-9.72c-.17-.53-.27-1.09-.27-1.69,0-.96.8-1.73,1.76-1.73s1.72.76,1.72,1.73c0,.56.23,1.13.63,1.69,2.35,3.22,11.11,6.23,22.25,6.23s19.89-3.01,22.25-6.23c.39-.56.63-1.13.63-1.69,0-.96.8-1.73,1.76-1.73s1.72.76,1.72,1.73c0,.6-.1,1.16-.26,1.69Z"/>
+                    </g>
+            </svg>
+
+                <span class="logo-text">RIPPLENCE</span>
+            
+            </div>    
+            
+            <p class="footer-text">
+                We design and build reliable web and mobile applications with a focus on
+                clarity, performance, and long-term maintainability.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-links">
+            <h4>Services</h4>
+            <ul>
+                <li>Web Application Development</li>
+                <li>Mobile App Development</li>
+                <li>UI / UX Design</li>
+                <li>Backend & API Development</li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+            <div class="social-icons">
+
+                                <!-- Instagram -->
+
+                <a 
+                href="https://www.instagram.com/ripplence_official/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow us on Instagram"
+                    >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+
+                                <!-- Twitter / X -->
+
+                <a 
+                href="https://twitter.com/Ripplence"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Follow us on Twitter"
+                >
+                <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                </a>
+
+                                <!-- WhatsApp -->
+
+                <a 
+                    href="https://wa.me/917056565594"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Chat with us on WhatsApp"
+                    >
+                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                </a>
+
+
+    <!-- Inactive social links: remove .social-inactive when account is ready -->
+
+                                <!-- Facebook -->
+
+                <a 
+                href="#" class="social-inactive" aria-label="Facebook (inactive)">
+                <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+
+                                <!-- LinkedIn -->
+
+                <a 
+                href="#" class="social-inactive" aria-label="LinkedIn (inactive)">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Ripplence. All rights reserved.</p>
+    </div>
+</footer>
+
+    <!-- Link to external JavaScript file -->
+     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
