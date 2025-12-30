@@ -1,0 +1,2 @@
+# Ripplence-website
+Static
