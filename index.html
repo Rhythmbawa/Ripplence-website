@@ -575,8 +575,10 @@
 
         <div class="contact-wrapper">
             <!-- Contact Form -->
-            <form id="contactForm" class="contact-form reveal" 
-                    action="send-mail.php" method="POST" novalidate>
+            <form 
+                    id="contactForm" 
+                    class="contact-form reveal" 
+        novalidate>
                 <div class="form-group">
                     <label for="name">Full Name</label>
                     <input 
@@ -610,6 +612,16 @@
                     <small class="error-msg"></small>
                 </div>
 
+                <!-- Honeypot field (hidden from users, visible to bots) -->
+                        <input
+                            type="text"
+                            name="company"
+                            tabindex="-1"
+                            autocomplete="off"
+                            style="position:absolute; left:-9999px;"
+                            >
+
+
                 <button type="submit" class="btn btn-primary">Submit Your Enquiry</button>
                 <p 
                     class="form-success" 
@@ -639,7 +651,7 @@
                     <div class="reveal fast delay-1">
                         <div class="contact-card card-hover">
                         <h3>Contact Information</h3>
-                        <p>Email: <a href="mailto:contact@xyz.com">hello@ripplence.com</a></p>
+                        <p>Email: <a href="mailto:hello@ripplence.com">hello@ripplence.com</a></p>
                         <p>Phone: +91-7056565594</p>
                         <p>Address: Haryana, India</p>
                         <br>
