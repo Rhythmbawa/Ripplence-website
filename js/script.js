@@ -164,8 +164,16 @@ if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
+        // Honeypot spam check
+    if (contactForm.company && contactForm.company.value) {
+      return; // silently block bot submission
+    }
+
         let valid = true;
-        const fields = contactForm.querySelectorAll('input, textarea');
+        const fields = contactForm.querySelectorAll(
+            'input:not([name="company"]), textarea'
+    );
+
 
         fields.forEach(field => {
             const error = field.nextElementSibling;
@@ -179,25 +187,40 @@ if (contactForm) {
 
         if (!valid) return;
 
-        try {
-            const formData = new FormData(contactForm);
+        const SCRIPT_URL =
+  "https://script.google.com/macros/s/AKfycbwJXyt02UDjv8mjyht8c5U58I60E3Fo3cYMcwx5_kpawd5xCrkjJ-vo5CWLhb0m-Uaz/exec";
 
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: formData
-            });
+const payload = {
+  name: contactForm.name.value.trim(),
+  email: contactForm.email.value.trim(),
+  message: contactForm.message.value.trim()
+};
 
-            const result = await response.text();
+try {
+  const formData = new URLSearchParams();
+formData.append("name", payload.name);
+formData.append("email", payload.email);
+formData.append("message", payload.message);
 
-            if (result.trim() === 'SUCCESS') {
-                successMsg.style.display = 'block';
-                contactForm.reset();
-            } else {
-                alert('Failed to send message. Please try again.');
-            }
-        } catch (error) {
-            alert('Server error. Please try later.');
-        }
+const response = await fetch(SCRIPT_URL, {
+  method: "POST",
+  body: formData
+});
+
+
+  const result = await response.json();
+
+  if (result.status === "success") {
+    successMsg.style.display = "block";
+    contactForm.reset();
+  } else {
+    alert("Submission failed. Please try again.");
+  }
+
+} catch (error) {
+  alert("Network error. Please try later.");
+}
+
     });
 }
 
