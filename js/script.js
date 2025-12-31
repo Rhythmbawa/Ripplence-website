@@ -159,6 +159,8 @@ filterButtons.forEach(button => {
 
 const contactForm = document.getElementById('contactForm');
 const successMsg = document.getElementById('formSuccess');
+const submitBtn = contactForm?.querySelector('button[type="submit"]');
+
 
 if (contactForm) {
     contactForm.addEventListener('submit', async function (e) {
@@ -187,6 +189,13 @@ if (contactForm) {
 
         if (!valid) return;
 
+        // ---- Sending state ----
+            submitBtn.disabled = true;
+            submitBtn.classList.add("is-loading");
+            submitBtn.dataset.originalText = submitBtn.textContent;
+            submitBtn.textContent = "Sending...";
+
+
         const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbwJXyt02UDjv8mjyht8c5U58I60E3Fo3cYMcwx5_kpawd5xCrkjJ-vo5CWLhb0m-Uaz/exec";
 
@@ -210,14 +219,35 @@ const response = await fetch(SCRIPT_URL, {
 
   const result = await response.json();
 
-  if (result.status === "success") {
+if (result.status === "success") {
+    successMsg.classList.add("visible");
     successMsg.style.display = "block";
+
     contactForm.reset();
-  } else {
+
+    // Auto-hide success message after 7 seconds
+    setTimeout(() => {
+        successMsg.classList.remove("visible");
+        successMsg.style.display = "none";
+    }, 7000);
+
+    // Restore submit button
+        submitBtn.disabled = false;
+        submitBtn.classList.remove("is-loading");
+        submitBtn.textContent = submitBtn.dataset.originalText;
+
+}
+ else {
     alert("Submission failed. Please try again.");
   }
 
 } catch (error) {
+
+  // Restore submit button
+  submitBtn.disabled = false;
+  submitBtn.classList.remove("is-loading");
+  submitBtn.textContent = submitBtn.dataset.originalText;
+
   alert("Network error. Please try later.");
 }
 
