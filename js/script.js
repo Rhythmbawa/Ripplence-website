@@ -155,6 +155,65 @@ filterButtons.forEach(button => {
     });
 });
 
+// ================= EMAIL QUALITY CHECK (SOFT) =================
+
+function analyzeEmailQuality(email) {
+    const lowerEmail = email.toLowerCase();
+
+    // Common dummy keywords
+    const suspiciousKeywords = [
+        "test",
+        "abc",
+        "xyz",
+        "demo",
+        "sample",
+        "fake",
+        "example"
+    ];
+
+    // Disposable / temporary email domains
+    const disposableDomains = [
+        "mailinator.com",
+        "tempmail.com",
+        "10minutemail.com",
+        "yopmail.com",
+        "guerrillamail.com",
+        "trashmail.com",
+        "dispostable.com"
+    ];
+
+    const domain = lowerEmail.split("@")[1] || "";
+
+    // Check keyword patterns
+    const keywordHit = suspiciousKeywords.some(word =>
+        lowerEmail.startsWith(word + "@") ||
+        lowerEmail.includes(word + "@") ||
+        lowerEmail.includes("@" + word)
+    );
+
+    // Check disposable domain
+    const disposableHit = disposableDomains.includes(domain);
+
+    if (disposableHit) {
+        return {
+            level: "warning",
+            message:
+                "Please use an email address you actively monitor. Temporary or disposable emails may prevent us from responding."
+        };
+    }
+
+    if (keywordHit) {
+        return {
+            level: "warning",
+            message:
+                "This email looks unusual. Please ensure you are using a valid email so we can respond effectively."
+        };
+    }
+
+    return null; // Email looks fine
+}
+
+
 // -------------------- CONTACT FORM VALIDATION SCRIPT --------------------
 
 const contactForm = document.getElementById('contactForm');
@@ -204,6 +263,22 @@ const payload = {
   email: contactForm.email.value.trim(),
   message: contactForm.message.value.trim()
 };
+
+// ---------- Soft email quality warning (Option B) ----------------
+const emailWarning = analyzeEmailQuality(payload.email);
+
+if (emailWarning) {
+    const emailField = contactForm.email;
+    const emailError = emailField.nextElementSibling;
+
+    emailError.textContent = emailWarning.message;
+
+    // Clear warning after a few seconds (non-blocking)
+    setTimeout(() => {
+        emailError.textContent = "";
+    }, 5000);
+}
+
 
 try {
   const formData = new URLSearchParams();
