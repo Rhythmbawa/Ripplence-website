@@ -398,7 +398,7 @@ interactivity: {
     };
 }
 
-/* ---------- INITIAL LOAD ---------- */
+/* --------------------- INITIAL LOAD ---------- */
 
 const initialTheme = htmlElement.getAttribute("data-theme");
 
@@ -407,8 +407,16 @@ tsParticles.load(
     getParticleConfig(initialTheme)
 );
 
-/* ---------- ACCESSIBILITY ---------- */
+/* ---------------------- ACCESSIBILITY ---------- */
 
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     tsParticles.domItem(0)?.destroy();
 }
+
+// ----------------------- FOOTER YEAR --------------------
+const yearSpan = document.getElementById("currentYear");
+
+if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+}
+
